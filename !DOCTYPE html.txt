@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobConnect Portal | Find Your Career</title>
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+    <header class="site-header">
+        <div class="container text-center">
+            <h1>JobConnect 🚀</h1>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Browse All</a>
+                <a href="#">Post Job</a>
+                <a href="#">Sign In</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <section class="hero-search">
+            <div class="container text-center">
+                <h2>Ready for a New Challenge?</h2>
+                <form class="search-form" action="/search" method="GET">
+                    <input type="text" name="keyword" placeholder="Job Title, Skill, or Company" required>
+                    <input type="text" name="location" placeholder="City, State, or Remote">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="job-section">
+            <div class="container">
+                <h2>Top Featured Jobs</h2>
+
+                <article class="job-card">
+                    <h3>Principal Software Architect</h3>
+                    <div class="job-meta">
+                        <p><strong>Company:</strong> Innovate Solutions</p>
+                        <p><strong>Location:</strong> San Francisco, CA</p>
+                        <p><strong>Type:</strong> Full-time</p>
+                    </div>
+                    <p>Lead the architectural design and implementation of our next-generation cloud platform using Golang and AWS.</p>
+                    <a href="#" class="btn-apply">Apply Now</a>
+                </article>
+
+                <article class="job-card">
+                    <h3>Digital Marketing Manager</h3>
+                    <div class="job-meta">
+                        <p><strong>Company:</strong> Global Brands Co.</p>
+                        <p><strong>Location:</strong> Remote (Europe)</p>
+                        <p><strong>Type:</strong> Full-time</p>
+                    </div>
+                    <p>Develop and execute comprehensive marketing strategies across paid social, SEO, and email channels.</p>
+                    <a href="#" class="btn-apply">Apply Now</a>
+                </article>
+                
+                <article class="job-card">
+                    <h3>UX/UI Design Intern</h3>
+                    <div class="job-meta">
+                        <p><strong>Company:</strong> Startup Hub</p>
+                        <p><strong>Location:</strong> Austin, TX</p>
+                        <p><strong>Type:</strong> Internship</p>
+                    </div>
+                    <p>Collaborate with product teams to create wireframes, prototypes, and user flows for mobile and web apps.</p>
+                    <a href="#" class="btn-apply">Apply Now</a>
+                </article>
+                
+                <article class="job-card">
+                    <h3>Senior Data Scientist</h3>
+                    <div class="job-meta">
+                        <p><strong>Company:</strong> Data Metrics Inc.</p>
+                        <p><strong>Location:</strong> New York, NY</p>
+                        <p><strong>Type:</strong> Full-time</p>
+                    </div>
+                    <p>Utilize machine learning and statistical modeling to drive business insights from large datasets.</p>
+                    <a href="#" class="btn-apply">Apply Now</a>
+                </article>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; 2024 JobConnect Portal. Built for people looking for great careers.</p>
+    </footer>
+
+</body>
+</html>

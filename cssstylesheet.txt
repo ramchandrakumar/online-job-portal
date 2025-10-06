@@ -1,0 +1,262 @@
+/*
+    -----------------------------------
+    BASE STYLES & VARIABLES
+    -----------------------------------
+*/
+
+:root {
+    /* Main Theme Colors */
+    --color-primary: #007bff;     /* Key Blue */
+    --color-success: #28a745;     /* Green for positive actions (Search) */
+    --color-warning: #ffc107;     /* Yellow/Amber for secondary actions (Apply) */
+    --color-text-dark: #343a40;   /* Darker text */
+    --color-text-light: #6c757d;  /* Gray secondary text */
+
+    /* Layout & Backgrounds */
+    --bg-light: #f8f9fa;          /* Very light gray background */
+    --bg-card: #ffffff;           /* White card background */
+    --border-default: #dee2e6;    /* Light border color */
+    --shadow-default: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.08); /* Subtle shadow */
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--color-text-dark);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    margin-top: 0;
+    font-weight: 600;
+}
+
+/*
+    -----------------------------------
+    LAYOUT & UTILITIES
+    -----------------------------------
+*/
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Clear space for the fixed footer */
+main {
+    padding-bottom: 70px;
+}
+
+/*
+    -----------------------------------
+    HEADER & NAVIGATION
+    -----------------------------------
+*/
+
+.site-header {
+    background-color: var(--color-primary);
+    color: white;
+    padding: 15px 0;
+    box-shadow: var(--shadow-default);
+}
+
+.site-header h1 {
+    font-size: 1.8rem;
+    padding: 5px 0;
+}
+
+.nav-links {
+    text-align: center; /* Ensure links are centered */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+.nav-links a:hover {
+    color: #cce5ff;
+}
+
+/*
+    -----------------------------------
+    SEARCH SECTION (The Hero Area)
+    -----------------------------------
+*/
+
+.hero-search {
+    background-color: #e9ecef;
+    padding: 40px 15px;
+    border-bottom: 1px solid var(--border-default);
+}
+
+.hero-search h2 {
+    color: var(--color-text-dark);
+    margin-bottom: 25px;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.search-form input[type="text"] {
+    padding: 12px 15px;
+    border: 1px solid var(--border-default);
+    border-radius: 5px;
+    flex-grow: 1;
+    min-width: 150px;
+}
+
+.search-form button {
+    padding: 12px 25px;
+    background-color: var(--color-success);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    flex-shrink: 0;
+}
+
+.search-form button:hover {
+    background-color: #1e7e34;
+}
+
+/*
+    -----------------------------------
+    JOB CARD LISTING
+    -----------------------------------
+*/
+
+.job-section {
+    padding: 30px 0;
+}
+
+.job-section h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Targets both hardcoded and JS-generated cards */
+.job-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-default);
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-default);
+    transition: transform 0.2s ease-out;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.job-card h3 {
+    color: var(--color-primary);
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+.job-meta {
+    font-size: 0.95rem;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+.job-meta p {
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.job-meta strong {
+    color: var(--color-text-dark);
+}
+
+/* Styles for the JS-generated button */
+.btn-apply-js { 
+    display: inline-block;
+    background-color: var(--color-warning);
+    color: var(--color-text-dark);
+    padding: 10px 18px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: 600;
+    transition: background-color 0.2s;
+}
+
+.btn-apply-js:hover {
+    background-color: #e0a800;
+}
+
+/*
+    -----------------------------------
+    FOOTER
+    -----------------------------------
+*/
+
+.site-footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--color-text-dark);
+    color: var(--bg-light);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 0.9rem;
+}
+
+/*
+    -----------------------------------
+    MEDIA QUERIES (Small Screens)
+    -----------------------------------
+*/
+
+@media (max-width: 600px) {
+    /* Force stack inputs and button on small screens */
+    .search-form {
+        flex-direction: column;
+    }
+
+    .site-header {
+        padding: 10px 0;
+    }
+
+    .site-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+        padding: 5px;
+    }
+}

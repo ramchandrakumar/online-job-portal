@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobConnect Portal | Find Your Career</title>
+    <!-- Links to the main stylesheet -->
+    <link rel="stylesheet" href="portal.css">
+</head>
+<body>
+
+    <!-- SITE HEADER -->
+    <header class="site-header">
+        <div class="container text-center">
+            <h1>JobConnect 🚀</h1>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Browse All</a>
+                <a href="#">Post Job</a>
+                <a href="#">Sign In</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        
+        <!-- SEARCH SECTION (HERO) -->
+        <section class="hero-search">
+            <div class="container text-center">
+                <h2>Ready for a New Challenge?</h2>
+                <!-- The JavaScript uses this form and its inputs -->
+                <form class="search-form" action="#" method="GET">
+                    <input type="text" name="keyword" placeholder="Job Title, Skill, or Company" required>
+                    <input type="text" name="location" placeholder="City, State, or Remote">
+                    <button type="submit">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- JOB LISTINGS SECTION -->
+        <section class="job-section">
+            <div class="container">
+                <h2>Top Featured Jobs</h2>
+                <!-- NOTE: The job cards will be rendered here dynamically by portal_logic.js -->
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <p>&copy; 2024 JobConnect Portal. Built for people looking for great careers.</p>
+    </footer>
+    
+    <!-- Link the JavaScript file here for performance -->
+    <script src="portal_logic.js"></script>
+
+</body>
+</html>
